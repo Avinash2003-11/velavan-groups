@@ -1029,8 +1029,8 @@ footer {
   };
 })();
 function go() {
-  const business = document.getElementById('business')
-  business.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  var target = document.getElementById('business');
+  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 </script>
 
