@@ -634,7 +634,7 @@ footer {
     <div class="hero-text">
       <h2>Welcome to <span>Velavan Groups</span></h2>
       <p>Delivering excellence across industries with trust, innovation, and premium services.</p>
-      <button class="btn" onclick="navigate('about')">EXPLORE SERVICES</button>
+      <button class="btn" onclick="go()">EXPLORE SERVICES</button>
     </div>
     <div class="hero-img">
       <img src="https://i.ibb.co/PGNyb0Kp/Gemini-Generated-Image-3omu813omu813omu.png" alt="Velavan Groups">
@@ -653,7 +653,8 @@ footer {
   </section>
 
   <!-- OUR BUSINESSES -->
-  <section class="business-glass" style="font-family:var(--ff-display);">
+  <section class="business-glass" style="font-family:var(--ff-display);" id="business
+">
     <h2 style="text-align:center;color:var(--gold);">Our Businesses</h2>
 
     <div class="business-item scroll-animate">
@@ -1028,6 +1029,10 @@ footer {
     setTimeout(initScrollAnimations, 120);
   };
 })();
+function go() {
+  const business = document.getElementById('business')
+  business.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 </script>
 
 </body>
