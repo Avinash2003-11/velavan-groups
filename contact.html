@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Velavan Groups — Builders | Consultancy | Travels | Import &amp; Export</title>
+  <title>Contact Us — Velavan Groups</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -254,7 +254,6 @@ body.nav-open { overflow: hidden; touch-action: none; }
   align-items: start;
 }
 .stat-grid { display: grid; gap: 16px; }
-.stat-grid--overview { grid-template-columns: repeat(3, 1fr); margin-top: 18px; }
 .stat-card {
   border: 1px solid rgba(201,168,76,0.15);
   background: rgba(255,255,255,0.02);
@@ -508,6 +507,91 @@ body.nav-open { overflow: hidden; touch-action: none; }
 .contact-card h4 { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
 .contact-card p, .contact-card a { font-size: 14px; color: var(--grey-light); line-height: 1.7; }
 .contact-card a:hover { color: var(--gold); }
+.contact-shell {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+.contact-shell__head {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 30px;
+}
+.contact-panel {
+  border: 1px solid rgba(201,168,76,0.16);
+  border-radius: 16px;
+  padding: 18px 18px 20px;
+  background: rgba(255,255,255,0.02);
+}
+.contact-panel__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 14px;
+}
+.contact-panel__kicker::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+}
+.direct-title {
+  font-family: var(--ff-display);
+  font-size: 44px;
+  line-height: 1.06;
+  margin-bottom: 16px;
+}
+.contact-info-list { display: grid; gap: 10px; }
+.contact-info-item {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.contact-info-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(201,168,76,0.22);
+  background: rgba(201,168,76,0.1);
+  display: grid;
+  place-items: center;
+  color: var(--gold-light);
+  font-size: 16px;
+}
+.contact-info-label {
+  font-size: 12px;
+  color: var(--white);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.contact-info-value {
+  font-size: 14px;
+  color: var(--grey-light);
+  line-height: 1.6;
+}
+.map-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(201,168,76,0.18);
+}
+.map-embed {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(201,168,76,0.15);
+  background: rgba(255,255,255,0.02);
+  min-height: 520px;
+}
+.map-embed iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  border: 0;
+  display: block;
+}
 
 .footer {
   background: linear-gradient(180deg, #0A0A1E 0%, #17103b 52%, #260f49 100%);
@@ -550,7 +634,6 @@ body.nav-open { overflow: hidden; touch-action: none; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .photo-strip { grid-template-columns: 1fr 1fr; }
-  .stat-grid--overview { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 768px) {
   .container {
@@ -560,7 +643,6 @@ body.nav-open { overflow: hidden; touch-action: none; }
   .biz-grid, .gallery-grid, .photo-strip { grid-template-columns: 1fr; }
   .footer__grid { grid-template-columns: 1fr; }
   .two-col { grid-template-columns: 1fr; }
-  .stat-grid--overview { grid-template-columns: 1fr; }
 }
 
   </style>
@@ -570,16 +652,16 @@ body.nav-open { overflow: hidden; touch-action: none; }
   <div class="container">
     <div class="navbar__inner">
       <a href="index.html#home" class="navbar__logo">
-        <img class="navbar__logo-lockup" src="https://i.ibb.co/gZtW8bZD/velavan-logo-fixed.png" alt="Velavan Groups logo" />
+        <img class="navbar__logo-lockup" src="assets/velavan-groups-logo.png" alt="Velavan Groups logo" />
       </a>
       <ul class="navbar__nav">
-        <li><a href="index.html#home" class="is-active">Home</a></li>
+        <li><a href="index.html#home">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="businesses.html">Our Businesses</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="careers.html">Careers</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="is-active">Contact</a></li>
       </ul>
       <div class="navbar__cta">
         <a href="https://wa.me/917599999598" class="btn btn--gold" target="_blank" rel="noopener noreferrer" data-no-wa>Enquiry Now</a>
@@ -591,145 +673,78 @@ body.nav-open { overflow: hidden; touch-action: none; }
   </div>
 </nav>
 
-<header class="page-hero page-hero--home" id="home">
+<header class="page-hero page-hero--contact" id="contact">
   <div class="page-hero__bg" aria-hidden="true"></div>
   <div class="page-hero__inner reveal">
     <p class="page-hero__kicker">Velavan Group · Thanjavur</p>
-    <h1 class="page-hero__title">Building trust across <em>industries</em></h1>
-    <p class="page-hero__sub">Velavan Groups is a diversified business group delivering excellence in travel, finance, construction, and manufacturing. With a commitment to quality and innovation, we serve individuals, businesses, and communities across India.</p>
+    <h1 class="page-hero__title">Contact <em>us</em></h1>
+    <p class="page-hero__sub">Get in touch with our team. We will get back to you shortly.</p>
     <div class="page-hero__actions">
-      <a href="businesses.html" class="btn btn--filled">Explore Our Businesses</a>
-      <a href="contact.html" class="btn btn--gold">Contact Us</a>
+      <a href="tel:+917599999598" class="btn btn--filled" data-no-wa>Call now</a>
+      <a href="https://wa.me/917599999598" class="btn btn--gold" target="_blank" rel="noopener noreferrer" data-no-wa>WhatsApp</a>
     </div>
   </div>
 </header>
 
-<section class="section section--tight section--wash" id="overview">
+<section class="section section--tight section--wash">
   <div class="container">
-    <div class="split reveal">
-      <div>
-        <div class="tag">Who we are</div>
-        <h2 class="heading-lg">One group, <em class="italic gold">many strengths</em></h2>
-        <p class="body-text" style="margin-top:20px;">Velavan Groups stands as a symbol of trust, growth, and reliability. With multiple successful ventures under one umbrella, we aim to provide end-to-end solutions across industries while maintaining the highest standards of professionalism.</p>
-        <a href="about.html" class="btn btn--gold" style="margin-top:28px;">About Velavan Groups</a>
+    <div class="contact-shell">
+      <div class="contact-shell__head reveal">
+        <h2 class="heading-lg">Get in Touch</h2>
+        <p class="body-text" style="margin-top:10px;">Have questions or ready to book? Contact us today and let us help you plan your journey.</p>
       </div>
-      <div>
-        <figure class="media-figure reveal">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=85" alt="Business professionals collaborating at Velavan Groups" width="900" height="600" loading="lazy" />
-        </figure>
+      <div class="contact-grid">
+        <article class="contact-panel reveal">
+          <div class="contact-panel__kicker">Direct Contact</div>
+          <h3 class="direct-title">Velavan Tours &amp; Travels</h3>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">📍</div>
+              <div>
+                <div class="contact-info-label">Address</div>
+                <div class="contact-info-value">Medical College Road, Thanjavur - 613004</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">📞</div>
+              <div>
+                <div class="contact-info-label">Phone / WhatsApp</div>
+                <div class="contact-info-value">+91 75999 99598<br />+91 74484 37301</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">✉</div>
+              <div>
+                <div class="contact-info-label">Email</div>
+                <div class="contact-info-value">velavantours@example.com</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">⏱</div>
+              <div>
+                <div class="contact-info-label">Hours</div>
+                <div class="contact-info-value">24/7 Available</div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="contact-panel reveal">
+          <div class="contact-panel__kicker">Google Map</div>
+          <div class="map-wrap">
+            <div class="map-embed" aria-label="Velavan Tours and Travels location map" style="min-height:430px;">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6994144714176!2d79.09700167481778!3d10.757633289389961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baabfa990171ec9%3A0xd98e6561e5dd78e8!2sVelavan%20Tours%20and%20Travels!5e0!3m2!1sen!2sin!4v1774266475022!5m2!1sen!2sin"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+                title="Velavan Tours and Travels location map"
+                style="min-height:430px;"
+              ></iframe>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
-    <div class="stat-grid stat-grid--overview reveal">
-      <div class="stat-card reveal">
-        <span class="stat-card__num">Multi-industry</span>
-        <span class="stat-card__label">Multi-industry expertise</span>
-      </div>
-      <div class="stat-card reveal">
-        <span class="stat-card__num">Customer-first</span>
-        <span class="stat-card__label">Customer-first approach</span>
-      </div>
-      <div class="stat-card reveal">
-        <span class="stat-card__num">Trusted</span>
-        <span class="stat-card__label">Trusted by hundreds of clients · Strong regional presence</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--tight" style="padding-top:40px;">
-  <div class="container">
-    <div class="tag reveal">Across our sectors</div>
-    <h2 class="heading-lg reveal">Excellence in <em class="italic gold">every field</em></h2>
-    <p class="body-text reveal" style="margin-top:14px;max-width:640px;">Construction sites, finance consultations, quality materials, and travel experiences—imagery from the worlds Velavan serves.</p>
-    <div class="photo-strip">
-      <div class="photo-strip__item reveal">
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=85" alt="Construction and building projects" width="800" height="600" loading="lazy" />
-      </div>
-      <div class="photo-strip__item reveal">
-        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=85" alt="Financial planning and business growth" width="800" height="600" loading="lazy" />
-      </div>
-      <div class="photo-strip__item reveal">
-        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=85" alt="Industrial materials and manufacturing" width="800" height="600" loading="lazy" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section businesses-preview">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="tag" style="justify-content:center;">Our Businesses</div>
-      <h2 class="heading-lg" style="text-align:center;">Verticals that <em class="italic gold">power progress</em></h2>
-      <p class="body-text" style="text-align:center;max-width:640px;margin:16px auto 0;">Some divisions maintain dedicated web experiences; others are showcased here. Every team shares the Velavan commitment to clarity, compliance, and care.</p>
-    </div>
-    <div class="biz-grid">
-      <a href="tours.html" class="biz-card biz-card--visual reveal" target="_blank" rel="noopener noreferrer" data-no-wa>
-        <div class="biz-card__thumb">
-          <img src="https://i.ibb.co/ymn9bVY4/Chat-GPT-Image-Mar-24-2026-02-09-26-PM.png" alt="Air travel and international tours" width="800" height="400" loading="lazy" />
-        </div>
-        <div class="biz-card__body">
-          <div class="biz-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10h18M5 6h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z"/><path d="M8 14h.01M12 14h.01M16 14h.01"/></svg>
-          </div>
-          <h3 class="biz-card__title">Velavan Travels</h3>
-          <p class="biz-card__text">International tours, luxury transport, and curated itineraries.</p>
-          <span class="biz-card__link">Visit Travels site →</span>
-        </div>
-      </a>
-      <a href="businesses.html#velavan-minerals" class="biz-card biz-card--visual reveal">
-        <div class="biz-card__thumb">
-          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=85" alt="Minerals and raw materials logistics" width="800" height="400" loading="lazy" />
-        </div>
-        <div class="biz-card__body">
-          <div class="biz-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l8 4v6c0 5-3.5 9-8 9s-8-4-8-9V7l8-4z"/></svg>
-          </div>
-          <h3 class="biz-card__title">Velavan Minerals</h3>
-          <p class="biz-card__text">Mineral sourcing and supply aligned with industry standards.</p>
-          <span class="biz-card__link">Visit minerals site →</span>
-        </div>
-      </a>
-      <a href="finance.html" class="biz-card biz-card--visual reveal">
-        <div class="biz-card__thumb">
-          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=85" alt="Finance and loan consultation" width="800" height="400" loading="lazy" />
-        </div>
-        <div class="biz-card__body">
-          <div class="biz-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-          </div>
-          <h3 class="biz-card__title">Velavan Finance</h3>
-          <p class="biz-card__text">Property, business, personal, and high-value loan solutions.</p>
-          <span class="biz-card__link">Learn more →</span>
-        </div>
-      </a>
-      <a href="builders.html" class="biz-card biz-card--visual reveal">
-        <div class="biz-card__thumb">
-          <img src="https://images.unsplash.com/photo-1541976590-713941681591?w=800&q=85" alt="Construction and building development" width="800" height="400" loading="lazy" />
-        </div>
-        <div class="biz-card__body">
-          <div class="biz-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-8h6v8"/></svg>
-          </div>
-          <h3 class="biz-card__title">Velavan Builders</h3>
-          <p class="biz-card__text">Residential, commercial, hospitals, malls, and property services.</p>
-          <span class="biz-card__link">Learn more →</span>
-        </div>
-      </a>
-      <a href="plastics.html" class="biz-card biz-card--visual reveal">
-        <div class="biz-card__thumb">
-          <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=85" alt="Plumbing and plastic piping solutions" width="800" height="400" loading="lazy" />
-        </div>
-        <div class="biz-card__body">
-          <div class="biz-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
-          </div>
-          <h3 class="biz-card__title">Velavan Plastics</h3>
-          <p class="biz-card__text">Plumbing, pipes, fittings, and bathroom accessories.</p>
-          <span class="biz-card__link">Learn more →</span>
-        </div>
-      </a>
-    </div>
-    <p class="text-center" style="margin-top:36px;"><a href="businesses.html" class="btn btn--filled">View all businesses</a></p>
   </div>
 </section>
 
@@ -752,7 +767,7 @@ body.nav-open { overflow: hidden; touch-action: none; }
     <div class="footer__grid">
       <div>
         <div class="footer__brand-lockup">
-          <img src="https://i.ibb.co/gZtW8bZD/velavan-logo-fixed.png" alt="" width="44" height="44" class="footer__brand-icon" />
+          <img src="assets/velavan-groups-logo.png" alt="" width="44" height="44" class="footer__brand-icon" />
           <div>
             <div class="footer__brand-name">VELAVAN <span>GROUPS</span></div>
             <div class="footer__brand-sub">Builders | Consultancy | Travels | Import &amp; Export</div>
